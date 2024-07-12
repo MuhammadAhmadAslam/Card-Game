@@ -48,6 +48,9 @@ i{
 .frontViewNone{
         display: none;
 }
-.frontview{
+.back-view{
     display: none;
+}
+.back-view-on{
+        display: block;
 }

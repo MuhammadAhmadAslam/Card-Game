@@ -20,7 +20,7 @@ function forFront(){
                 clickedCard1 = true
             }else if(!clickedCard2){
                 frontview.classList.add('frontViewNone');
-                frontview.classList.remove('frontview');
+                frontview.classList.remove('frontview')
                 clickedCard2 = true
             }
         })
@@ -67,6 +67,4 @@ function distributingImage() {
 distributingImage()
 
 
-function forBack(){
 
-}
