@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 body{
     background-color: #17153B !important;
@@ -9,7 +10,6 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow: hidden;
 }
 .container{
         background-color: #2E236C;
@@ -59,4 +59,20 @@ i{
 }
 .back-view-on{
         display: block;
+}
+#points{
+    color: white;
+    text-align: center;
+}
+#refresh{
+    width: 80px;
+    height: 30px;
+    border: none;
+    background-color: #C8ACD6;
+    color: #2E236C;
+}
+.points{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
 }
