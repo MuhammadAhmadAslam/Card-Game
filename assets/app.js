@@ -32,13 +32,15 @@ function forCards() {
         clickedCard1 = img;
         card1Index = currentIndex;
       } else if (!clickedCard2) {
-        imageArray.push(img);
-        frontview[currentIndex].classList.add('frontViewNone');
-        frontview[currentIndex].classList.remove('frontview');
-        backview[currentIndex].classList.add('back-view-on');
-        backview[currentIndex].classList.remove('back-view');
-        clickedCard2 = img;
         card2Index = currentIndex;
+        imageArray.push(img);
+        if (card1Index != card2Index) {
+          frontview[currentIndex].classList.add('frontViewNone');
+          frontview[currentIndex].classList.remove('frontview');
+          backview[currentIndex].classList.add('back-view-on');
+          backview[currentIndex].classList.remove('back-view');
+          clickedCard2 = img;
+        }
 
         if (clickedCard1.src === clickedCard2.src) {
           card[card1Index].removeEventListener('click', arguments.callee);
@@ -115,5 +117,23 @@ function distributingImage() {
   }
 distributingImage()
 
+let timeRemaining = 7 * 60; // 7 minutes in seconds
+let countdownInterval = setInterval(() => {
+  let minutes = Math.floor(timeRemaining / 60);
+  let seconds = timeRemaining % 60;
+  document.getElementById("time").innerHTML = `Timer <br /> ${minutes} : ${seconds}`;
+  timeRemaining--;
+  if (timeRemaining <= 0) {
+    clearInterval(countdownInterval);
+    printAfter()
+  }
+}, 1000);
 
 
+// setInterval((e) => {
+//   let timeInterval = 60 * 60;
+//   var carddiv = document.getElementById('card-div') 
+//   carddiv.innerHTML = ''
+//   var time = document.getElementById('time');
+//   console.log(true);
+// }, 100);

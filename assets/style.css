@@ -18,8 +18,8 @@ body{
 }
 #mainHeading{
     color: #C8ACD6;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 60px;
+    margin-bottom: 30px;
 }
 .cards-div{
         display: flex;
@@ -53,12 +53,14 @@ i{
 }
 .frontViewNone{
         display: none;
+        transition: all .7s ease-in;
 }
 .back-view{
     display: none;
 }
 .back-view-on{
         display: block;
+        transition: all 5s ease-in-out;
 }
 #points{
     color: white;
@@ -75,4 +77,8 @@ i{
     display: flex;
     margin-top: 30px;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+#time{
+    color: white;
 }
